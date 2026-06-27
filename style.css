@@ -20,10 +20,10 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-      background-color: white;
-      z-index: 1;
-    
-    
+    background-color: white;
+    z-index: 1;
+
+
 
 }
 
@@ -39,7 +39,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-  
+
 }
 
 .navbar__s2 input {
@@ -47,8 +47,8 @@ body {
     width: 100%;
     font-size: 16px;
     background-color: transparent;
-    
-    
+
+
 }
 
 .navbar__s2 input:focus {
@@ -59,6 +59,9 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+.navbar__s4{
+    display: none;
 }
 
 .catagories {
@@ -73,27 +76,30 @@ body {
     color: white;
     padding: 10px;
     border-radius: 300px;
-      border: #A435F0 1px solid;
-      
+    border: #A435F0 1px solid;
+
 
 
 }
-.catagories p:hover{
+
+.catagories p:hover {
     background-color: transparent;
     cursor: pointer;
     color: black;
     border: #A435F0 1px solid;
 
 }
+
 /* my learning popup */
-.mylearning{
+.mylearning {
     cursor: pointer;
     position: relative;
 
 }
-.mylearning__popup{
+
+.mylearning__popup {
     position: absolute;
-    background-color:white;
+    background-color: white;
     color: black;
     width: 100px;
     border: black 1px solid;
@@ -102,7 +108,8 @@ body {
     display: none;
     right: 0;
 }
-.mylearning:hover .mylearning__popup{
+
+.mylearning:hover .mylearning__popup {
     display: block;
 }
 
@@ -126,6 +133,9 @@ body {
 
 .course-card {
     width: 300px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course-card img {
@@ -160,7 +170,7 @@ body {
 
     display: flex;
     gap: 10px;
-    
+
 
 }
 
@@ -178,17 +188,20 @@ body {
 
 
 }
-.footer__one p{
+
+.footer__one p {
     margin: 20px;
 }
-.sale-image{
+
+.sale-image {
     position: relative;
-    
+
 
 }
-.sale-image__offer{
+
+.sale-image__offer {
     position: absolute;
-    background-color:white;
+    background-color: white;
     margin-left: 10px;
     padding: 2%;
     color: black;
@@ -202,15 +215,54 @@ body {
     animation-fill-mode: forwards;
 
 }
+
 @keyframes zoom {
-    0%{
+    0% {
         transform: scale(0);
         opacity: 0;
 
     }
-    100%{
-transform: scale(1);
-opacity: 1;
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
-    
+
+}
+
+/* media quiries*/
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    body {
+        font-size: 10px;
+
+    }
+
+    .course-card {
+        flex-basis: 40%;
+    }
+
+    .sale-image__offer {
+
+
+
+        display: none;
+    }
+.navbar__s4{
+    display: block;
+
+}
+.navbar__s2{
+    display: none;
+}
+.navbar__s3{
+    display: none;
+}
+ 
 }
